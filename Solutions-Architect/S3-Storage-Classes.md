@@ -23,3 +23,56 @@
 
 
 - Use this for **long-lived data** which is important but is accessed infrequently.
+
+
+## S3 One Zone-IA
+
+- Similar to Standard-IA.
+- Only uses one zone (less reliability).
+
+
+- Use this for **long-lived data** which is not important, replaceable, and
+    accessed infrequently.
+
+
+## S3 Glacier
+
+- Similar to Standard.
+- 1/5 of the cost.
+- Object **cannot be made public**.
+    - Requires a retrieval process.
+- Glacier is retrieved to Standard-IA temporarily:
+    - Expedited (1-5 min)
+    - Standard (3-5 h)
+    - Bulk (5-12 h)
+    - Faster = More expensive!
+
+
+- Use this for **archival data** where frequent or real-time access isn't
+    needed.
+
+
+## S3 Glacier Deep Archive
+
+- Similar to Glacier.
+- 1/4 of the cost.
+- Glacier is retrieved to Standard-IA temporarily:
+    - Standard (12 h)
+    - Bulk (up to 48 h)
+    - Faster = More expensive!
+
+
+- Use this for **archival data** that rarely needs to be accessed (e.g. Legal
+    or Regulation data storage).
+
+
+## S3 Intelligent-Tiering
+
+- Monitors and automatically moves objects between storage classes.
+- Objects not accessed for 30 days are moved to infrequent access.
+- There are no retrieval fees.
+- Cost per 1,000 objects for monitoring and automation.
+- Cost per storage type (similar to direct storage classes).
+
+
+- Use this for **long-lived data** with changing or unknown patterns.
